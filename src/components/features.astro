@@ -1,0 +1,65 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+import type { FeatureItem } from "~/types";
+
+const features: Array<FeatureItem> = [
+  {
+    title: "Learn JavaScript",
+    description:
+      "p5.js is a great way to learn the fundamentals of the language in a creative and fun way.",
+    icon: "mdi:handshake",
+  },
+  {
+    title: "Web Based",
+    description:
+      "Code on your favourite offline code editor or use the integrated web based version provided.",
+    icon: "mdi:feather",
+  },
+  {
+    title: "Easy canvas API syntax",
+    description: "The library has an easy way to use the canvas API",
+    icon: "mdi:directions-fork",
+  },
+  {
+    title: "Create Algorithmic Art",
+    description:
+      "p5 is perfect to dip your toes in the world of digital algorithmic art",
+    icon: "mdi:graph",
+  },
+  {
+    title: "Games?",
+    description:
+      "Sure, create your own games and learn with the Coding Train, how to code your own physics engine ",
+    icon: "mdi:search-web",
+  },
+  {
+    title: "Data",
+    description:
+      "Work with maps, data and many more different APIs to expand your coding horizon",
+    icon: "mdi:account-group",
+  },
+];
+---
+
+<ContentSection title="Features" id="features">
+  <!-- <Fragment slot="lead">
+    Astro comes <span class="text-primary">batteries included</span>. It takes
+    the best parts of
+    <span class="text-primary">state-of-the-art</span>
+    tools and adds its own <span class="text-primary">innovations</span>.
+  </Fragment> -->
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      features.map(({ title, description, icon }) => (
+        <li class="border-default bg-offset flex flex-col items-center gap-4 border p-6">
+          <div class="h-16 w-16 rounded-full border-2 border-current p-3">
+            <Icon name={icon} />
+          </div>
+          <p class="text-center text-xl font-extrabold">{title}</p>
+          <p class="text-offset text-center text-sm">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</ContentSection>
