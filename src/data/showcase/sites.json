@@ -1,5 +1,10 @@
 [
   {
+    "title": "Slide Puzzle",
+    "image": "./images/slide_puzzle.png",
+    "url": "https://editor.p5js.org/Garcila/full/t572IfnYI"
+  },
+  {
     "title": "Splat Line",
     "image": "./images/astro_spot_line.png",
     "url": "https://editor.p5js.org/Garcila/full/v8cF6Oo2Q"
